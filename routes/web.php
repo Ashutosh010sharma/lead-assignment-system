@@ -3,12 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeadController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::post('/create-lead', [LeadController::class, 'createLead']);
-Route::get('/lead-form', function () {
+Route::get('/', function () {
     return view('create-lead');
 });
 Route::get('/leads', [LeadController::class, 'listLeads']);
